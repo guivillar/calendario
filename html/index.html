@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Calendario</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" style="margin-right: 5%;">
+            <a id="criar_btn" class="nav-link btn btn-outline-success">Criar</a><span></span>
+          </li>
+          <li class="nav-item" style="margin-right: 5%;">
+            <a id="editar_btn" class="nav-link btn btn-outline-primary">Editar</a><span></span>
+          </li>
+          <li class="nav-item" style="margin-right: 5%;">
+            <a id="apagar_btn" class="nav-link btn btn-outline-danger">Deletar</a><span></span>
+          </li>
+          <li class="nav-item" style="margin-right: 5%;">
+            <a id="listar_btn" class="nav-link btn btn-outline-secondary">Listar</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-secondary" href="../php/sair.php">Logout</a>
+          </li>
+        </ul>
+      </div>
+      
+    </nav>
+    <div>
+      <div id="criar_evento" class="container-fluid col-md-4 rounded border divbox" style="display: none;">
+        <form class="form-singin" method="POST" action="../php/criaEvento.php">
+          <h1 class="h3 mb-3 font-weight-normal">Criar Evento</h1>
+          <input type="text" name="nomeEC" id="nomeEC" class="form-control" placeholder="Nome do Evento" style="background-color: #eee;"><br>
+          <textarea type="text" name="descricaoEC" id="descricaoEC" class="form-control" placeholder="Descrição" style="background-color: #eee;"></textarea><br>
+          <input type="date" name="dataIEC" id="dataIEC" class="form-control" style="background-color: #eee;"><br>
+          <input type="date" name="dataTEC" id="dataTEC" class="form-control" style="background-color: #eee;"><br>
+          <input type="time" name="horaIEC" id="horaIEC" class="form-control" style="background-color: #eee;"><br>
+          <input type="time" name="horaTEC" id="horaTEC" class="form-control" style="background-color: #eee;"><br>
+          <button type="submit" id="criar" name="criarE" class="btn btn-lg btn-primary btn-block">Criar</button><br>
+        </form>
+      </div>
+      <div id="editar_evento" class="container-fluid col-md-4 rounded border divbox">
+        <form class="form-singin" method="POST" action="../php/editaEvento.php">
+          <h1 class="h3 mb-3 font-weight-normal">Editar Evento</h1>
+          <input type="text" name="nomeEE" id="nomeEE" class="form-control" placeholder="Nome do Evento" style="background-color: #eee;"><br>
+          <textarea type="text" name="descricaoEE" id="descricaoEE" class="form-control" placeholder="Descrição" style="background-color: #eee;"></textarea><br>
+          <input type="date" name="dataIEE" id="dataIEE" class="form-control" style="background-color: #eee;"><br>
+          <input type="date" name="dataTEE" id="dataTEE" class="form-control" style="background-color: #eee;"><br>
+          <input type="time" name="horaIEE" id="horaIEE" class="form-control" style="background-color: #eee;"><br>
+          <input type="time" name="horaTEE" id="horaTEE" class="form-control" style="background-color: #eee;"><br>
+          <button type="submit" id="editar" name="editarE" class="btn btn-lg btn-primary btn-block">Editar</button><br>
+        </form>
+      </div>
+      <div id="apagar_evento" class="container-fluid col-md-4 rounded border divbox" style="display: none;">
+        <form class="form-singin" method="POST" action="../php/editaEvento.php">
+          <h1 class="h3 mb-3 font-weight-normal">Apagar Evento</h1>
+          <input type="text" name="nomeEE" id="nomeEE" class="form-control" placeholder="Selecione o Evento" style="background-color: #eee;"><br>
+          <button type="submit" id="deletar" name="deletarE" class="btn btn-lg btn-primary btn-block">Deletar</button><br>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
